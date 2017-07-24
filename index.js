@@ -43,7 +43,20 @@ go.addEventListener("mouseenter", function() {
   console.log("Entered " + go.textContent +  " button")
 })
 
+// BONUS
 
+var clickLog = document.getElementsByClassName('button')
+var bulbLog = document.getElementsByClassName('bulb')
+for (let i=0; i<clickLog.length; i++) {
+  clickLog[i].addEventListener("click", function() {
+    if (bulbLog[i].style["background-color"] === "black") {
+      console.log(clickLog[i].textContent + " bulb off")
+    } else {
+      console.log(clickLog[i].textContent + " bulb on")
+    }
+
+  })
+}
 
 
 
